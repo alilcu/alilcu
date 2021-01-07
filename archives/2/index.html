@@ -1,0 +1,1182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="dNVWpYUQN4ENQD-usF1vaBSIu_gnMcxvsVYzmELomoA">
+    <meta name="baidu-site-verification" content="9FxBYJOcht">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="YKBlog | 杨凯 | 支付 | 金融 ｜ Java | 架构 | 网络">
+    <meta name="keyword" content="YK, YKBlog, 杨凯, 杨凯的博客, 支付, 账务, 清结算, 金融, Java, 架构, 网络">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          YK Blog - 杨凯 | Java
+        
+    </title>
+
+    <link rel="canonical" href="http://ykblog.top/archives/2/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/css/beantech.min.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <link rel="stylesheet" href="/css/archive.css">
+
+  <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- ga & ba script hoook -->
+    <!-- jQuery -->
+    <script src="/js/jquery.min.js"></script>
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('/img/header/bg-auto-home.gif') 
+            /*config*/
+        
+    }
+    
+    #signature{
+        background-image: url('/img/signature/yk-sign-white.png');
+    }
+    
+</style>
+
+<header class="intro-header" id="intro-header">
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="site-heading">
+                        <h1>YK Blog</h1>
+                        <!--<hr class="small">-->
+                        <span class="subheading">🌝 Be the excellent Java engineer！🌚</span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">YangKai Blog</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/categories/">Categories</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Main Content -->
+<div class="container">
+    <div class="row">
+        
+
+<!-- USE SIDEBAR -->
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+            
+                <!-- Main Content -->
+
+
+<div class="post-preview">
+
+    <a href="/posts/pay/【账务】复式记账/">
+        <h2 class="post-title">
+            【账务】复式记账
+        </h2>
+        <h3 class="post-subtitle">
+            大账务系统-会计知识-复式记账
+        </h3>
+        <div class="post-content-preview">
+            概念和特征
+
+复式记账的概念
+定义：复式记账法是指对每一笔经济业务都要以相等的金额，同时在两个或两个以上相互联系的账户中进行登记的记账方法。
+
+对每项经济业务按相等金额在两个或两个以上有关账户中同时进行登记的方法。
+复式记账的理论依据是会计基本等式。
+复式记账按记账符号，记账规则、试算平衡方法的不同，可分为借贷记账法，增减记账法和收付记账法。
+借贷记账法是一种最杂的、当今运用最广泛的复式记账......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by yangkai on
+            2018-10-01
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#支付" title="支付">支付</a>
+            
+              <a href="/tags/#账务" title="账务">账务</a>
+            
+              <a href="/tags/#会计" title="会计">会计</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/posts/pay/【账户】账户体系-账户建模/">
+        <h2 class="post-title">
+            【账户】账户体系-账户建模
+        </h2>
+        <h3 class="post-subtitle">
+            大账务系统-账户体系-账户建模
+        </h3>
+        <div class="post-content-preview">
+            账户建模要素
+
+考虑要素
+
+在支付系统中，账户的建模，主要是从如下几个方面来考虑：
+
+
+交易的需求: 比如检查账户是否被锁定、余额是否足够、是否有效等。
+记账的需求: 按照公司会计需求记录账户上的所有行为，包括支出、充值、转账等。
+对账的需求: 包括和支付渠道、商户、个人的对账需求，核对交易和账户余额是否正确。
+风控的需求: 如反洗钱、反欺诈等，都需要依赖于账户体系来提供核心数据。
+信用的需......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by yangkai on
+            2018-09-02
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#支付" title="支付">支付</a>
+            
+              <a href="/tags/#账务" title="账务">账务</a>
+            
+              <a href="/tags/#账户" title="账户">账户</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/posts/pay/【账户】账户体系-账户设计/">
+        <h2 class="post-title">
+            【账户】账户体系-账户设计
+        </h2>
+        <h3 class="post-subtitle">
+            大账务系统-账户体系-账户设计
+        </h3>
+        <div class="post-content-preview">
+            账户概念
+
+账户设置，一般是从交易开始的。 交易的实现必须有账户的支持，账户是交易的基本构成元素。
+　　从支付系统的角度，交易中涉及到的资金流是资金从一个账户流向另一个账户。发起交易的一方，被称之为交易主体，他可以是个人，也可以是一个机构。
+资金从该主体所拥有的账户中流出。 而接收交易的一方，被称为交易对手，他也可以是个人，或者机构。
+账户体系介绍
+
+账户体系设计整体原则是参考会计学原理关于......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by yangkai on
+            2018-09-02
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#支付" title="支付">支付</a>
+            
+              <a href="/tags/#账务" title="账务">账务</a>
+            
+              <a href="/tags/#账户" title="账户">账户</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/posts/pay/【账户】账户体系-三户模型/">
+        <h2 class="post-title">
+            【账务】账户体系-三户模型
+        </h2>
+        <h3 class="post-subtitle">
+            大账务系统-账户体系-三户模型
+        </h3>
+        <div class="post-content-preview">
+            概述
+
+背景
+三户指客户（Customer）、用户（User）和账户(Account)。
+　　三户模型最早是在增强型电信运营图（Enhanced Telecom Operations Map，eTOM）中提出，在电信行业中得到广泛使用。
+　　eTOM 引入是电信行业营销模型转向“以客户为中心”的理念而产生的成果。围绕客户建立用户和账户，这三个是相互关联的实体。近年来，金融行业也逐步接受和采用......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by yangkai on
+            2018-09-01
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#支付" title="支付">支付</a>
+            
+              <a href="/tags/#账务" title="账务">账务</a>
+            
+              <a href="/tags/#账户" title="账户">账户</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/posts/Java/【JUC】ThreadLocal剖析/">
+        <h2 class="post-title">
+            【JUC】ThreadLocal剖析
+        </h2>
+        <h3 class="post-subtitle">
+            Java-JUC-ThreadLocal深度剖析
+        </h3>
+        <div class="post-content-preview">
+            ThreadLocal简介
+
+ThreadLocal，很多地方叫做线程本地变量，也有些地方叫做线程本地存储。
+正确理解Threadlocal
+ThreadLocal并不解决多线程共享变量的问题。既然变量不共享，那就更谈不上同步的问题。
+
+它的基本原理是，同一个ThreadLocal所包含的对象（对ThreadLocal&lt; String &gt;而言即为String类型变量），在不同的T......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by yangkai on
+            2018-08-23
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Java" title="Java">Java</a>
+            
+              <a href="/tags/#JUC" title="JUC">JUC</a>
+            
+              <a href="/tags/#ThreadLocal" title="ThreadLocal">ThreadLocal</a>
+            
+              <a href="/tags/#源码" title="源码">源码</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/posts/network/【网络】OSI和TCP-IP概述和区别/">
+        <h2 class="post-title">
+            【网络】OSI和TCP/IP概述和区别
+        </h2>
+        <h3 class="post-subtitle">
+            网络-OSI和TCP/IP-OSI七层协议和TCP/IP四层协议概述和区别
+        </h3>
+        <div class="post-content-preview">
+            OSI
+
+OSI是七层网络架构
+　　OSI（Open System Interconnection）是一个开放性的通行系统互连参考模型 。
+　　是一个理论模型；实际工业中并没有这么设计的。
+　　上面四层，即7、6、5、4层定义了应用程序的功能；下面3层，即3、2、1层主要面向通过网络的端到端的数据流。
+　　是由ISO (International Standards Organization......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by yangkai on
+            2018-04-04
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#网络" title="网络">网络</a>
+            
+              <a href="/tags/#TCP" title="TCP">TCP</a>
+            
+              <a href="/tags/#OSI" title="OSI">OSI</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/posts/network/【网络】HTTP原理与概述/">
+        <h2 class="post-title">
+            【网络】HTTP原理与概述
+        </h2>
+        <h3 class="post-subtitle">
+            网络-HTTP-HTTP概述、原理和跨站攻击
+        </h3>
+        <div class="post-content-preview">
+            HTTP协议
+
+HTTP简介
+HTTP协议（HyperText Transfer Protocol，超文本传输协议）
+　　用于从WWW服务器传输超文本到本地浏览器的传送协议。它可以使浏览器更加高效，使网络传输减少。它不仅保证计算机正确快速地传输超文本文档，还确定传输文档中的哪一部分，以及哪部分内容首先显示(如文本先于图形)等。
+　　HTTP 协议是以 ASCII 码传输，建立在 TCP/IP......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by yangkai on
+            2018-04-04
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#网络" title="网络">网络</a>
+            
+              <a href="/tags/#原理" title="原理">原理</a>
+            
+              <a href="/tags/#HTTP" title="HTTP">HTTP</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/posts/network/【网络】TCP-IP概述和原理/">
+        <h2 class="post-title">
+            【网络】TCP/IP概述和原理
+        </h2>
+        <h3 class="post-subtitle">
+            网络-TCP/IP-TCP/IP概述和三次握手、四次挥手原理
+        </h3>
+        <div class="post-content-preview">
+            TCP/IP协议说明
+
+两台计算机之间的通信是通过TCP/IP协议在因特网上进行的。
+TCP : Transmission Control Protocol 传输控制协议。
+IP：Internet Protocol  网际协议。
+　　CP/IP不是一个协议，而是一个协议族的统称。里面包括了IP协议，IMCP协议，TCP协议，以及我们更加熟悉的http、ftp、pop3协议等等。电脑有了这些，......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by yangkai on
+            2018-04-03
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#网络" title="网络">网络</a>
+            
+              <a href="/tags/#TCP" title="TCP">TCP</a>
+            
+              <a href="/tags/#原理" title="原理">原理</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/posts/network/【网络】IP地址结构/">
+        <h2 class="post-title">
+            【网络】IP地址结构
+        </h2>
+        <h3 class="post-subtitle">
+            网络-IP-IP地址结构概述
+        </h3>
+        <div class="post-content-preview">
+            IP地址概述
+
+概念
+IP地址就是给每个连接在Internet上的主机分配⼀个在全世界范围唯⼀的32位⼆进制数。
+　　通常采⽤“点分十进制”表示法，即直观的、以圆点“.’’分隔的4 个⼗进制数表示。每⼀个数对应于8个⼆进制数，如某⼀台主机的IP地址是192.168.10.4。最小0，最大255；全0和全1的都保留不用。
+　　IP地址的这种结构使每一个网络⽤户都可以很⽅便地在Internet上......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by yangkai on
+            2018-04-01
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#网络" title="网络">网络</a>
+            
+              <a href="/tags/#IP" title="IP">IP</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+<div class="post-preview">
+
+    <a href="/posts/arch/【设计模式】单例模式/">
+        <h2 class="post-title">
+            【设计模式】单例模式
+        </h2>
+        <h3 class="post-subtitle">
+            设计模式-单例模式的七种写法-Java实现
+        </h3>
+        <div class="post-content-preview">
+            整体介绍
+
+介绍
+
+单例模式（Singleton Pattern） 是 Java 中最简单的设计模式之一。
+这种类型的设计模式属于创建型模式，它提供了一种创建对象的最佳方式。
+意图：保证一个类仅有一个实例，并提供一个访问它的全局访问点。
+
+
+这种模式涉及到一个单一的类，该类负责创建自己的对象，同时确保只有单个对象被创建。这个类提供了一种访问其唯一的对象的方式，可以直接访问，不需要实例化该类的......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by yangkai on
+            2018-04-01
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#架构" title="架构">架构</a>
+            
+              <a href="/tags/#设计模式" title="设计模式">设计模式</a>
+            
+              <a href="/tags/#Java" title="Java">Java</a>
+            
+        </div>
+    
+
+</div>
+<hr>
+
+
+
+<!-- Pager -->
+
+<ul class="pager">
+    
+        <li class="previous">
+            <a href="/"><i class="fa fa-hand-o-left"></i> PREV</a>
+        </li>
+    
+    
+        <li class="next">
+            <a href="/archives/3/">NEXT <i class="fa fa-hand-o-right"></i></a>
+        </li>
+    
+</ul>
+
+
+
+                <!-- 评论 -->
+                
+
+            </div>
+
+          <!-- Sidebar Container -->
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+        <!-- Featured Tags -->
+
+<section>
+    <!-- no hr -->
+    <h5>
+        <span class="fa fa-tags"></span>
+        <a href="/tags/">Tags</a>
+    </h5>
+    <div class="tags">
+        
+            
+            <a href="/tags/网络" title="网络" rel="5">网络</a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/支付" title="支付" rel="13">支付</a>
+            
+        
+            
+            <a href="/tags/清结算" title="清结算" rel="5">清结算</a>
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/清算" title="清算" rel="4">清算</a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/账务" title="账务" rel="8">账务</a>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+</section>
+
+        <hr>
+    
+        <!-- search -->
+<h5>
+  <span class="fa fa-search"></span>
+  Search
+</h5>
+<div class="search">
+  <!-- google站内搜索 -->
+  <div>
+    <a href="http://www.google.com/">
+      <img src="http://www.google.com/logos/Logo_40wht.gif" border="0" alt="Google">
+    </a>
+      <form action="http://google.com/search" target="_blank" accept-charset="GB2312">
+      <span class="search">
+        <input type="search" name="q" placeholder="google站内搜索"></span>
+      <span class="button">
+        <input type="submit" value="Google"></span>
+      <input name="sitesearch" type="hidden" value="ykblog.top">
+    </form>
+  </div>
+  
+  <!-- 百度站内搜索 -->
+  <div class="baidu">
+    <a href="http://www.baidu.com/">
+      <img src="http://img.baidu.com/img/logo-137px.gif" border="0" alt="baidu">
+    </a>
+      <form action="http://www.baidu.com/baidu" target="_blank">
+        <span class="search">
+          <input type="text" name="word" placeholder="百度站内搜索"></span>
+        <span class="button">
+          <input type="submit" value="Baidu"></span>
+        <input name="tn" type="hidden" value="bds">
+        <input name="cl" type="hidden" value="3">
+        <input name="ct" type="hidden" value="2097152">
+        <input name="si" type="hidden" value="ykblog.top">
+      </form>
+  </div>
+</div>  
+
+<style type="text/css">
+.search {
+  margin-bottom:55px;
+}
+.search input {
+      font-size:14px;
+      border:none;
+      background:none;
+      height:33px;
+      line-height:33px;
+  }
+.search span.search {
+      float:left;
+      padding:0;
+      margin:0;
+      width:160px;
+      background:#fafafa;
+      border:0.9px solid #5085e2;
+      border-top-left-radius:7px;
+      border-bottom-left-radius:7px;
+}
+.search span.search input {
+      font-family:KaiTi;
+      width:160px;
+      padding:0 5px;
+      outline:none;
+}
+input::-webkit-input-placeholder {
+    color: #c2c1bc;
+}
+.search span.button {
+    float:left;
+    padding:0;
+    margin:0;
+    border:0.8px solid #5085e2;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+}
+.search span.button input {
+    width:50px;
+    padding:0 2px;
+    background:#5085e2;
+    color:#fff;
+}
+.search img{
+  width:75px;
+  height:28px;
+  margin-bottom:5px;
+}  
+.baidu{
+  margin-top:50px;
+  margin-bottom:15px;
+ }
+.search div {
+      clear:both;
+}</style>
+        <hr>
+    
+        <!-- Short About -->
+<section class="visible-md visible-lg">
+    <h5>
+        <span class="fa fa-street-view"></span>
+        <a href="/about/">About Me</a></h5>
+    <div class="short-about">
+
+        
+            <img id="avatar_pic" src="/img/about-gentle.jpg">
+        
+
+        
+            <p>👀 支付 | 金融 ┇ Java | 架构</p>
+        
+
+        <!-- SNS Link -->
+        <ul class="list-inline">
+            
+ 
+ 
+    <li>
+        <a target="_blank" href="https://github.com/ykblog" style="color:#161414 !important">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+
+
+
+    <li>
+        <a target="_blank" href="https://blog.csdn.net/yangkai_hudong" style="color:#ca0613 !important">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa  fa-stack-1x fa-inverse">C</i>
+            </span>
+        </a>
+    </li>
+
+
+ 
+ <li>
+     <a target="_blank" href="https://www.jianshu.com/u/757057e66591" style="color:#e96f5e !important"> 
+         <span class="fa-stack fa-lg">
+             <i class="fa fa-circle fa-stack-2x"></i>
+             <i class="fa  fa-stack-1x fa-inverse">简</i>
+         </span>
+     </a>
+ </li>
+ 
+
+ 
+    <li>
+        <a target="_blank" href="https://www.zhihu.com/people/ykeven/columns" style="color:#1687fb !important">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa  fa-stack-1x fa-inverse">知</i>
+            </span>
+        </a>
+    </li>
+
+
+ 
+
+ 
+    <li>
+        <a target="_blank" href="http://weibo.com/CSDNyangkai" style="color:#e0272f !important">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+
+
+
+
+ 
+
+ 
+
+ 
+
+           
+        </ul>
+    </div>
+</section>
+        <hr>
+    
+        
+  <h5>
+    <span class="fa fa-book"></span>
+    Recent Posts
+  </h5>
+  <div class="widget">
+    <ul>
+      
+        <li>
+          <a href="/posts/pay/【清结算】清结算之电商行业/">【清结算】清结算之电商行业</a>
+        </li>
+      
+        <li>
+          <a href="/posts/pay/【清结算】清结算演进过程/">【清结算】清结算的演进过程</a>
+        </li>
+      
+        <li>
+          <a href="/posts/pay/【清结算】清结算相关概念/">【清结算】清结算相关概念</a>
+        </li>
+      
+        <li>
+          <a href="/posts/pay/【清结算】清结算之第三方支付机构/">【清结算】清结算之第三方支付机构</a>
+        </li>
+      
+        <li>
+          <a href="/posts/pay/【清结算】清结算之银行/">【清结算】清结算之银行</a>
+        </li>
+      
+        <li>
+          <a href="/posts/pay/【账务】账务系统设计/">【账务】账务系统设计</a>
+        </li>
+      
+    </ul>
+  </div>
+
+        <hr>
+    
+        <!-- Categories -->
+
+    <h5>
+      <span class="fa fa-cubes"></span>
+      <a href="/categories/">Category</a>
+    </h5>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/支付/">支付</a><span class="category-list-count">14</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/架构/">架构</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/网络/">网络</a><span class="category-list-count">5</span></li></ul>
+    </div>
+
+        <hr>
+    
+        <!-- Friends Blog -->
+
+<h5>
+    <span class="fa fa-drupal"></span> 
+    Friends
+</h5>
+<div class="widget">
+    <ul>
+        
+            <li><a href="https://blog.csdn.net/yangkai_hudong" target="_blank">CSDN Blog</a></li>
+        
+            <li><a href="https://hexo.io/zh-cn/" target="_blank">Hexo</a></li>
+        
+            <li><a href="https://itimetraveler.github.io/funnysite/" target="_blank">Hexo 酷站</a></li>
+        
+            <li><a href="https://tech.meituan.com/" target="_blank">美团技术博客</a></li>
+        
+    </ul>
+</div>
+
+        <hr>
+    
+        
+    <h5>
+      <span class="fa fa-archive"></span>
+      <a href="/archive/">Archive</a>
+    </h5>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/02/">2019年 02月</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">2018年 12月</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">2018年 10月</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">2018年 09月</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">2018年 08月</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">2018年 04月</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">2018年 01月</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+
+        <hr>
+    
+</div>
+
+        
+    </div>
+</div>
+
+
+    <!-- Image to hack wechat -->
+    <!--  -->
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                    
+ 
+ 
+    <li>
+        <a target="_blank" href="https://github.com/ykblog" style="color:#161414 !important">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+
+
+
+    <li>
+        <a target="_blank" href="https://blog.csdn.net/yangkai_hudong" style="color:#ca0613 !important">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa  fa-stack-1x fa-inverse">C</i>
+            </span>
+        </a>
+    </li>
+
+
+ 
+ <li>
+     <a target="_blank" href="https://www.jianshu.com/u/757057e66591" style="color:#e96f5e !important"> 
+         <span class="fa-stack fa-lg">
+             <i class="fa fa-circle fa-stack-2x"></i>
+             <i class="fa  fa-stack-1x fa-inverse">简</i>
+         </span>
+     </a>
+ </li>
+ 
+
+ 
+    <li>
+        <a target="_blank" href="https://www.zhihu.com/people/ykeven/columns" style="color:#1687fb !important">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa  fa-stack-1x fa-inverse">知</i>
+            </span>
+        </a>
+    </li>
+
+
+ 
+
+ 
+    <li>
+        <a target="_blank" href="http://weibo.com/CSDNyangkai" style="color:#e0272f !important">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+            </span>
+        </a>
+    </li>
+
+
+
+
+ 
+
+ 
+
+ 
+
+           
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; yangkai 2019 
+                    <br>
+                    Theme by <a href="http://beantech.org">beantech</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    Remould by <a href="http://ykblog.top">yangkai</a>
+                  <!--
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=gietkeven&repo=ykblog.github.io&type=star&count=true" >
+                    </iframe>
+                    -->
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://ykblog.top/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-132062495-1';
+    var _gaDomain = 'auto';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '01fc82d384955158dd75bb41fb7e5a30';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+
+</body>
+
+</html>
